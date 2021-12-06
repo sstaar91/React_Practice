@@ -20,6 +20,7 @@ export const Time = () => {
   };
 
   useEffect(() => {
+    getClock();
     const timer = setInterval(getClock, 1000);
     return () => clearInterval(timer);
   }, []);
