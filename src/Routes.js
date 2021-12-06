@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import { Todo } from './pages/Todo/Todo';
+import { Todo } from './pages/todopage/Todo';
 
 class Routes extends React.Component {
   render() {
