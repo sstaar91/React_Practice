@@ -5,8 +5,9 @@
 
 ### 개요
 - 해당 작업은 [바닐라 JS로 크롬 앱 만들기](https://nomadcoders.co/javascript-for-beginners/lobby)에서 학습한 내용을 바탕으로
-  바닐라 JS를 React로 변환 시키고, 추가적인 기능을 더했습니다.
+  바닐라 JS를 React로 변환 시켰습니다.
 - 기본적인 기능에 대한 내용은 [크롬 앱 repo](https://github.com/sstaar91/VanillaJS_Practice)를 참조해주시기 바랍니다.
+- 기본적인 기능에 추가적인 애니메이션, 기능을 더했습니다.
 
 ### 사용 스택
   
