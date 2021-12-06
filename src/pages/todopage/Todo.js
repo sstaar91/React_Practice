@@ -1,21 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const TodoBody = styled.body`
+import { Time } from '../../components/Time';
+
+const TodoBody = styled.article`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+`;
+
+const TodoArticle = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
-const TodoArticle = styled.article`
-  display: flex;
-  justify-content: center;
-`;
-
 export const Todo = () => {
   return (
     <TodoBody>
-      <TodoArticle>todo 만들기</TodoArticle>
+      <TodoArticle>
+        <Time />
+      </TodoArticle>
     </TodoBody>
   );
 };
