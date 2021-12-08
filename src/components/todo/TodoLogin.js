@@ -38,7 +38,7 @@ export const TodoLogin = () => {
   useEffect(() => {
     if (localStorage.getItem('name') !== null) {
       setLoginName(localStorage.getItem('name'));
-      setToggleDisplay(!toggleDisplay);
+      setToggleDisplay(false);
     }
   }, []);
 
