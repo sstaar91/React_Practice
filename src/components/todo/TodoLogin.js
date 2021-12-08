@@ -9,8 +9,8 @@ const WelcomSection = styled.section``;
 
 const WriteForm = styled.form`
   animation-duration: 2s;
-  animation-name: ${props => (props.toggle ? fade_in : fade_out)};
-  display: ${props => (props.toggle ? 'inherit' : 'none')};
+  animation-name: ${props => (props.className ? fade_in : fade_out)};
+  display: ${props => (props.className ? 'inherit' : 'none')};
 `;
 
 const WriteName = styled.input`
@@ -52,9 +52,16 @@ export const TodoLogin = () => {
     setToggleDisplay(!toggleDisplay);
   };
 
+  const logoutUser = () => {
+    localStorage.removeItem('name');
+    localStorage.removeItem('todos');
+    setToggleDisplay(!toggleDisplay);
+    setLoginName('');
+  };
+
   return (
     <WelcomSection>
-      <WriteForm toggle={toggleDisplay}>
+      <WriteForm className={toggleDisplay}>
         <WriteName
           required
           tyoe="text"
@@ -65,7 +72,11 @@ export const TodoLogin = () => {
         />
         <input type="submit" onClick={loginSubmitHandle} hidden />
       </WriteForm>
-      <ListForm loginName={loginName} toggle={toggleDisplay} />
+      <ListForm
+        loginName={loginName}
+        toggle={toggleDisplay}
+        logout={logoutUser}
+      />
     </WelcomSection>
   );
 };
