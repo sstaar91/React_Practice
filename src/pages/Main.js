@@ -1,28 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { ListForm } from '../../components/todo/ListForm';
+import { MainLogin } from '../components/MainLogin';
 
-const TodoBody = styled.article`
+const MainSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 `;
 
-const TodoArticle = styled.section`
+const MainArticle = styled.article`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 `;
 
-export const Todo = () => {
+export const Main = () => {
   return (
-    <TodoBody>
-      <TodoArticle>
-        <ListForm />
-      </TodoArticle>
-    </TodoBody>
+    <MainSection>
+      <MainArticle>
+        <MainLogin />
+      </MainArticle>
+    </MainSection>
   );
 };
