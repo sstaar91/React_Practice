@@ -5,11 +5,12 @@ import { Time } from './Time';
 import { TodoList } from './TodoList';
 
 import { fade_in } from '../../styles/Mixin';
+import { useNavigate } from 'react-router';
 
 const Main = styled.section`
   animation-duration: 2s;
-  animation-name: ${props => (props.className ? 'none' : fade_in)};
-  display: ${props => (props.className ? 'none' : 'flex')};
+  animation-name: ${fade_in};
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -71,9 +72,11 @@ const LogOut = styled.button`
   cursor: pointer;
 `;
 
-export const ListForm = ({ loginName, toggle, logout }) => {
+export const ListForm = () => {
   const [listText, setListText] = useState('');
   const [lists, setLists] = useState([]);
+
+  const userName = localStorage.getItem('name');
 
   useEffect(() => {
     const loadList = JSON.parse(localStorage.getItem('todos'));
@@ -94,11 +97,19 @@ export const ListForm = ({ loginName, toggle, logout }) => {
     }
   };
 
+  const navigate = useNavigate();
+
+  const logoutUser = () => {
+    localStorage.removeItem('name');
+    localStorage.removeItem('todos');
+    navigate('/');
+  };
+
   return (
-    <Main className={toggle}>
+    <Main>
       <Title>
         <Time />
-        <WelcomeText>{loginName} 님의 일상을 기록하세요</WelcomeText>
+        <WelcomeText>{userName} 님의 일상을 기록하세요</WelcomeText>
       </Title>
       <WriteForm>
         <ListInput
@@ -116,7 +127,7 @@ export const ListForm = ({ loginName, toggle, logout }) => {
           return <TodoList key={data.id} id={data.id} value={data.text} />;
         })}
       </ListDiv>
-      <LogOut onClick={logout}>로그아웃</LogOut>
+      <LogOut onClick={logoutUser}>로그아웃</LogOut>
     </Main>
   );
 };
