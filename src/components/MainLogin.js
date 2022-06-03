@@ -2,30 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
 import styled from 'styled-components';
 
-import { fade_in } from '../styles/Mixin';
-
-const WriteForm = styled.form`
-  animation-duration: 2s;
-  animation-name: ${fade_in};
-`;
-
-const WriteName = styled.input`
-  text-align: center;
-  padding: 10px 30px;
-  width: 40vw;
-  border: none;
-  font-size: 2vw;
-
-  &:focus {
-    outline: none;
-    place-content: none;
-    border-bottom: 1px solid lightgray;
-  }
-
-  &:focus::placeholder {
-    color: white;
-  }
-`;
+import { animation } from '../styles';
+const { fade_in } = animation;
 
 export const MainLogin = () => {
   const [loginName, setLoginName] = useState('');
@@ -62,3 +40,26 @@ export const MainLogin = () => {
     </>
   );
 };
+
+const WriteForm = styled.form`
+  animation-duration: 2s;
+  animation-name: ${fade_in};
+`;
+
+const WriteName = styled.input`
+  text-align: center;
+  padding: 10px 30px;
+  width: 40vw;
+  border: none;
+  font-size: 2vw;
+
+  &:focus {
+    outline: none;
+    place-content: none;
+    border-bottom: 1px solid lightgray;
+  }
+
+  &:focus::placeholder {
+    color: white;
+  }
+`;

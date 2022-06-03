@@ -1,28 +1,15 @@
 import React from 'react';
-import styled from 'styled-components';
+import { ListForm } from '../../components/todo';
+import * as S from './Todo.style';
 
-import { ListForm } from '../../components/todo/ListForm';
-
-const TodoBody = styled.article`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-`;
-
-const TodoArticle = styled.section`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-`;
-
-export const Todo = () => {
+const Todo = () => {
   return (
-    <TodoBody>
-      <TodoArticle>
+    <S.TodoBody>
+      <S.TodoArticle>
         <ListForm />
-      </TodoArticle>
-    </TodoBody>
+      </S.TodoArticle>
+    </S.TodoBody>
   );
 };
+
+export default Todo;

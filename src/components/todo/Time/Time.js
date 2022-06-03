@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-const TimeDiv = styled.span`
-  font-weight: 700;
-`;
-
-export const Time = () => {
+const Time = () => {
   const [timeCheck, setTimeCheck] = useState('');
 
   const getClock = () => {
@@ -27,3 +23,8 @@ export const Time = () => {
 
   return <TimeDiv>{timeCheck}</TimeDiv>;
 };
+
+const TimeDiv = styled.span`
+  font-weight: 700;
+`;
+export default Time;

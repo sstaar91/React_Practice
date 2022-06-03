@@ -2,20 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { MainLogin } from '../components/MainLogin';
+import { mixin } from '../styles';
 
-const MainSection = styled.section`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-`;
-
-const MainArticle = styled.article`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-`;
+const { flexCenter } = mixin;
 
 export const Main = () => {
   return (
@@ -26,3 +15,13 @@ export const Main = () => {
     </MainSection>
   );
 };
+
+const MainSection = styled.section`
+  ${flexCenter};
+  height: 100vh;
+`;
+
+const MainArticle = styled.article`
+  ${flexCenter};
+  flex-direction: column;
+`;
