@@ -24,6 +24,7 @@ export const Main = () => {
         >
           클릭
         </button>
+        <div>1</div>
       </MainArticle>
     </MainSection>
   );
