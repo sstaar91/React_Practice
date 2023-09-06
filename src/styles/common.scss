@@ -1,0 +1,7 @@
+@import './color.scss';
+
+* {
+  box-sizing: border-box;
+  background-color: $mainBackground;
+  color: white;
+}
