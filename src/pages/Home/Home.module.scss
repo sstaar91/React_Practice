@@ -1,3 +1,5 @@
+@import 'styles/color.scss';
+
 .container {
   display: flex;
   flex-direction: column;
@@ -7,7 +9,7 @@
 }
 
 .title {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 900;
 }
 
@@ -32,7 +34,7 @@
   position: relative;
   padding: 20px;
   border-radius: 20px;
-  background-color: #fcf7ee;
+  background-color: $cardBackground;
 }
 
 .wide {
@@ -51,10 +53,12 @@
   position: absolute;
   right: 20px;
   bottom: 20px;
-  padding: 10px 20px;
+  padding: 10px 30px;
   border: none;
   border-radius: 15px;
-  background-color: #ffd8a3;
+  background-color: $buttonBG;
+  font-size: 18px;
+  font-weight: 700;
   text-align: center;
   transition: 0.3s all ease-in;
   cursor: pointer;

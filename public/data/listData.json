@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "project": "RESAT",
+    "title": "RESAT Farming Challenge",
+    "description": "미니인턴에서 진행한 10일간의 챌린지 과제를 하나의 앱으로 구성해 놓은 프로젝트입니다.",
+    "func": [
+      { "id": 1, "title": "timer", "description": "타이머 기능" },
+      { "id": 2, "title": "calendar", "description": "달력 기능" },
+      { "id": 3, "title": "image", "description": "캐러셀 기능" }
+    ]
+  },
+  {
+    "id": 2,
+    "project": "nomadJS",
+    "title": "NOMAD Coders : Momentum App",
+    "description": "노마드코더에서 바닐라 자바스크립트로 제작한 앱을 리액트로 변환한 프로젝트입니다.",
+    "func": [{ "id": 1, "title": "edit", "description": "To-Do 리스트 기능" }]
+  }
+]

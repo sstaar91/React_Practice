@@ -7,13 +7,13 @@ const Home = () => {
   return (
     <section className={css.container}>
       <h2 className={css.title}>안녕하세요! 김명성입니다 👋</h2>
-      <p className={css.desBox}>
+      <div className={css.desBox}>
         <span>
           해당 프로젝트는 리액트를 활용한 다양한 미니 프로젝트를 모아 놓은
           페이지입니다.
         </span>
-      </p>
-      <p className={css.desBox}>
+      </div>
+      <div className={css.desBox}>
         <h3 className={css.desTitle}>STACK</h3>
         <div className={css.cardBox}>
           {STACK_LIST.map(({ id, title }) => {
@@ -24,8 +24,8 @@ const Home = () => {
             );
           })}
         </div>
-      </p>
-      <p className={css.desBox}>
+      </div>
+      <div className={css.desBox}>
         <h3 className={css.desTitle}>RECENTLY PROJECT</h3>
         <div className={css.cardBox}>
           {PROJECT_LIST.map(({ id, title }) => {
@@ -37,7 +37,7 @@ const Home = () => {
             );
           })}
         </div>
-      </p>
+      </div>
     </section>
   );
 };
