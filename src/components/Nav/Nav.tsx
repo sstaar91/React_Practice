@@ -1,9 +1,12 @@
 import React from 'react';
-import css from './Nav.module.scss';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { cn, cond } from 'utils/styles/styles';
 import Icons from 'components/Icons';
-import { useNavigate } from 'react-router-dom';
+import css from './Nav.module.scss';
 
 const Nav = () => {
+  const location = useLocation();
+  const curPath = location.pathname;
   const navigate = useNavigate();
 
   return (
@@ -12,9 +15,15 @@ const Nav = () => {
       <ul className={css.listUl}>
         {NAV_LIST.map(({ id, title, path }) => {
           return (
-            <li className={css.listLi} key={id} onClick={() => navigate(path)}>
-              <Icons title={title} />
-              <span className={css.listTitle}>{title.toUpperCase()}</span>
+            <li
+              className={cn(css.listLi, cond(curPath === path, css.select))}
+              key={id}
+              onClick={() => navigate(path)}
+            >
+              {curPath !== path && <Icons title={title} />}
+              {curPath === path && (
+                <span className={css.listTitle}>{title.toUpperCase()}</span>
+              )}
             </li>
           );
         })}

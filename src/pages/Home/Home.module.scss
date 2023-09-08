@@ -1,4 +1,66 @@
 .container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   background-color: white;
   color: black;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.desBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.desTitle {
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.cardBox {
+  display: flex;
+  gap: 15px;
+}
+
+.cardBg {
+  position: relative;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #fcf7ee;
+}
+
+.wide {
+  width: 250px;
+}
+
+.cardTitle {
+  margin-bottom: 100px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.moveBtn {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  background-color: #ffd8a3;
+  text-align: center;
+  transition: 0.3s all ease-in;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: 0.2s all ease-in;
+  }
 }
